@@ -1,5 +1,5 @@
 const GameObject = (() => {
-
+//testing if i can't uplad 
     let gameBoard = Array(9).fill('');
     //this populates the gameboard with 9 '' in an array.
     let currentTurn = ' ';
