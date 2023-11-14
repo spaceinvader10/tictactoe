@@ -89,6 +89,10 @@ function restart(){
         squares[i].removeEventListener('click', vsAi);
     }
 
+    for (let n = 0; n < buttons.length; n++){
+        buttons[n].style.backgroundColor = "#ccc";
+    }
+
     gameOver = false;
     //need to be add because the restart function did not set gameOver to false so it would not trigger the alerts anymore
     console.log('Game has restarted! Choose X or O!');
@@ -96,14 +100,14 @@ function restart(){
 
 
 const squares = document.getElementsByClassName("square");
-console.log(squares)
 //replace the text value of the div into X or O vice-versa
 for(let i = 0; i < squares.length; i++){
     squares[i].addEventListener('click', toggleOn);
 }
 
-//how do i test if it has already has a textContent value in the square?
-//how do i improve?
+
+
+
 function toggleOn(event) {
     const square = event.target;
     if(square.textContent === ""){
@@ -262,23 +266,6 @@ function checkForDraw(winner){
 }
 
 
-// function gameEnd(over){
-//    return over = true;
-// }
-
-
-// Example usage:
-//console.log(GameObject.getGameBoard()); // Access game board
-//console.log(GameObject.getCurrentTurn()); // Access current turn
-//GameObject.toggleTurn(); // Toggle the turn
-//GameObject.printGameBoard(); // Log the game board
-
-
-//how to build an ai for this
-//after player selects X or O and hits 1 square. 
-//maybe check if current turn is X or O
-//randomly hit another square but not the one that the player has hit.
-
 const aiPlayer = document.getElementById('ai');
 
 aiPlayer.addEventListener('click', connectAi);
@@ -353,7 +340,27 @@ function aiTurn () {
 }
 
 
+//highlight the btn clicked
+// Highlight the btn clicked
+const buttons = document.getElementsByClassName("btn");
 
+for (let m = 0; m < buttons.length; m++) {
+    
+    buttons[m].addEventListener('click', highlight);
+}
+
+
+function highlight(event) {
+    if(event.target.id !== 'reset'){
+        if (event.target.style.backgroundColor === 'rgb(255, 246, 0)') {
+            event.target.style.backgroundColor = '#ccc';
+        } else {
+            event.target.style.backgroundColor = 'rgb(255, 246, 0)';
+        }
+    } else {
+        console.log('Restarted')
+    }    
+}
 
 
 

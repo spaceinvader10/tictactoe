@@ -7,23 +7,25 @@
 .board {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  width: 500px;
 }
 
 .square {
   font-size: 2rem;
-  width: calc(33.33% - 20px); /* Adjusted width with margin */
-  height: 7rem;
-  margin-right: 20px; /* Adjusted margin for spacing */
-  margin-bottom: 20px; /* Adjusted margin for spacing */
+  width: 33%; 
+  height: 8rem;
+  /* margin-right: 20px; 
+  margin-bottom: 20px;  */
   background-color: #ccc;
   padding: 10px;
   text-align: center;
-  box-sizing: border-box; /* Ensure the width calculation includes padding and margin */
-  border: 2px solid black;
+  box-sizing: border-box; 
+  border: 3px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 86%;
 }
 
 
@@ -41,11 +43,21 @@
   width: 500px;
   padding: 10px;
   margin: auto;
-  margin-bottom: 8rem;
+  margin-bottom: 5rem;
   box-sizing: border-box;
   background-color: aquamarine;
   height: 20%;
   border: 2px solid black;
 }
+
+button {
+  width: 3.2rem;
+  height: 1.5rem;
+  border: 2px solid black;
+  font-size: 0.5 rem;
+}
+
+
+
 
 
